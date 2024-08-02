@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+#board {
+  width: 720px;
+  height: 720px;
+  border: 10px solid darkgrey;
+  background-color: rgba(193, 172, 172, 0.756);
+
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: center;
+}
+
+#board div {
+  width: 43px;
+  height: 43px;
+  border: 1px solid whitesmoke;
+
+  /* text */
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tile-clicked {
+  background: darkgray;
+}
+
+.x1 {
+  color: blue;
+}
+.x2 {
+  color: green;
+}
+.x3 {
+  color: red;
+}
+.x4 {
+  color: darkblue;
+}
+.x5 {
+  color: brown;
+}
+.x6 {
+  color: rgb(66, 139, 182);
+}
+.x7 {
+  color: black;
+}
+.x8 {
+  color: goldenrod;
+}
+
+#flag-button {
+  height: 50px;
+  width: 250px;
+  margin-top: 20px;
+  font-size: 30px;
+  background-color: lightgray;
+  border: none;
+  border-radius: 8px;
+}
+#flag-button:hover {
+  background-color: darkgray;
+}
+
+#reset-button {
+  height: 50px;
+  width: 50px;
+  border: none;
+  text-align: center;
+  font-size: 25px;
+  border-radius: 8px;
+  background-color: lightgray;
+}
+#reset-button:hover {
+  background-color: darkgrey; /* Optional, for hover effect */
+}
+.detonated-bomb {
+  background: red;
+}
+
+.flagged-tile {
+  background: lightskyblue;
+}
+
+.mode {
+  margin-left: 50px;
+}
+
+#timer {
+  margin-bottom: -36px;
+  margin-left: -500px;
+}
+
+#mines {
+  margin-left: 500px;
+}
