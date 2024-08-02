@@ -4,7 +4,7 @@ Simple minesweeper
 
 Got some of the code from this tutorial - https://www.youtube.com/watch?v=AfhfAxKFP-s
 
-Things thah I added:
+Things that I added:
 - reset button
 - 3 difficulties
 - timer
