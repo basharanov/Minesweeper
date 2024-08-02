@@ -1,0 +1,2 @@
+# Minesweeper
+simple minesweeper
