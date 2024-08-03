@@ -2,6 +2,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   text-align: center;
+  background-color: white;
+  color: black;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 #board {
@@ -83,7 +86,7 @@ body {
   background-color: darkgrey; /* Optional, for hover effect */
 }
 .detonated-bomb {
-  background: red;
+  background: rgb(177, 27, 27);
 }
 
 .flagged-tile {
@@ -102,3 +105,35 @@ body {
 #mines {
   margin-left: 500px;
 }
+
+#switch-mode {
+  margin-left: 50px;
+  height: 45px;
+  width: 85px;
+  font-size: 30px;
+  border-radius: 8px;
+  border: none;
+  background-color: lightgray;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+#board div.tile-dark-mode {
+  border: 1px solid rgb(41, 41, 41);
+}
+
+#board.board-dark-mode {
+  border: 10px solid rgb(43, 39, 39);
+  background-color: rgba(138, 66, 66, 0.756);
+}
+
+/* #reset-button .reset-button-dark-mode {
+  color: aqua;
+}
+
+#board div.dark-mode .tile-clicked {
+  background: rgb(44, 42, 42);
+} */

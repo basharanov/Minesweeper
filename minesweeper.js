@@ -221,6 +221,14 @@ function resetGame() {
       tile.className = "";
     }
   }
+  if (document.body.classList.contains("dark-mode")) {
+    for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < colums; c++) {
+        let tile = document.getElementById(`${r}-${c}`);
+        tile.classList.toggle("tile-dark-mode");
+      }
+    }
+  }
   tilesClicked = 0;
   bomsSet = false;
 }
@@ -300,9 +308,18 @@ function setMode() {
   resetTimer();
   for (let r = 0; r < rows; r++) {
     for (let c = 0; c < colums; c++) {
-      document.getElementById(`${r}-${c}`).style.width = tileWidth;
-      document.getElementById(`${r}-${c}`).style.height = tileHeight;
-      document.getElementById(`${r}-${c}`).style.fontSize = tileFontSize;
+      let tile = document.getElementById(`${r}-${c}`);
+      tile.style.width = tileWidth;
+      tile.style.height = tileHeight;
+      tile.style.fontSize = tileFontSize;
+    }
+  }
+  if (document.body.classList.contains("dark-mode")) {
+    for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < colums; c++) {
+        let tile = document.getElementById(`${r}-${c}`);
+        tile.classList.toggle("tile-dark-mode");
+      }
     }
   }
 }
@@ -346,4 +363,23 @@ function resetTimer() {
   elapsedTime = 0;
   isRunning = false;
   document.getElementById("timer").innerText = "00:00:00";
+}
+
+// switching between nigh and light mode
+// Needs work
+document.getElementById("switch-mode").addEventListener("click", switchMode);
+
+function switchMode() {
+  document.body.classList.toggle("dark-mode");
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < colums; c++) {
+      let tile = board[r][c];
+      tile.classList.toggle("tile-dark-mode");
+      // document.querySelectorAll(".tile-clicked").style.
+    }
+  }
+  document.getElementById("board").classList.toggle("board-dark-mode");
+  // document
+  //   .getElementById("reset-button")
+  //   .classList.toggle("reset-button-dark-mode");
 }
